@@ -1,0 +1,46 @@
+
+ports:
+    - name: jellyseerr
+      description: 【统一平台】jellyseerr
+      port: 60216
+      onOpen: open-browser
+    - name: sonarr
+      description: 【电视剧索引】sonarr
+      port: 60218
+      onOpen: open-browser
+    - name: radarr
+      description: 【电影索引】radarr
+      port: 60217
+      onOpen: open-browser
+    - name: flaresolverr
+      description: flaresolverr
+      port: 60213
+      onOpen: open-browser
+    - name: chinesesubfinder
+      description: 【字幕】chinesesubfinder
+      port: 60221
+      onOpen: open-browser
+    - name: portainer
+      description: portainer
+      port: 60212
+      onOpen: open-browser
+    - name: jackett
+      description: jackett
+      port: 60214
+      onOpen: open-browser
+    - name: heimdall
+      description: 【内网面板】heimdall
+      port: 60211
+      onOpen: open-browser
+    - name: jproxy
+      description: jproxy
+      port: 60215
+      onOpen: open-browser
+    - name: qbittorrent
+      description: 【下载工具】qbittorrent
+      port: 60219
+      onOpen: open-browser
+    - name: emby
+      description: 【影音服务】emby
+      port: 60220
+      onOpen: open-browser
