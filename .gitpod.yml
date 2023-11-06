@@ -1,4 +1,10 @@
-
+tasks:
+    - name: init config
+      openMode: split-right
+      command: |
+        cd /workspace/automatic-theater
+        sudo chmod -R 777 * && sudo ./install.sh
+        docker ps 
 ports:
     - name: jellyseerr
       description: 【统一平台】jellyseerr
