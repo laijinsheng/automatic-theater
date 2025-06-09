@@ -8,7 +8,7 @@ networks:
 
 services:
   heimdall:
-    image: linuxserver/heimdall:2.5.4
+    image: linuxserver/heimdall:latest
     container_name: heimdall
     restart: unless-stopped
     environment:
@@ -55,21 +55,21 @@ services:
       network:
         ipv4_address: 172.128.2.13
 
-  jackett:
-    image: linuxserver/jackett:latest
-    container_name: jackett
+  prowlarr:
+    image: linuxserver/prowlarr:develop
+    container_name: prowlarr
     restart: unless-stopped
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - ${CONFIG_PATH}/jackett:/config
+      - ${CONFIG_PATH}/prowlarr:/config
     ports:
-      - 60214:9117
+      - 60223:9696
     networks:
       network:
-        ipv4_address: 172.128.2.14
+        ipv4_address: 172.128.2.23
 
   jproxy:
     image: luckypuppy514/jproxy:latest
@@ -89,7 +89,7 @@ services:
         ipv4_address: 172.128.2.15
 
   jellyseerr:
-    image: fallenbagel/jellyseerr:latest
+    image: fallenbagel/jellyseerr:develop
     container_name: jellyseerr
     restart: unless-stopped
     environment:
@@ -130,7 +130,7 @@ services:
       - qbittorrent
 
   sonarr:
-    image: linuxserver/sonarr:latest
+    image: linuxserver/sonarr:develop
     container_name: sonarr
     restart: unless-stopped
     environment:
@@ -195,7 +195,7 @@ services:
         ipv4_address: 172.128.2.21
 
   emby:
-    image: lovechen/embyserver:latest
+    image: emby/embyserver:latest
     container_name: emby
     restart: unless-stopped
     environment:
